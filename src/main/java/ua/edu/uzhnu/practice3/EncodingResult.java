@@ -1,0 +1,27 @@
+package ua.edu.uzhnu.practice3;
+
+import java.util.Map;
+
+/**
+ * Created by Таня on 25.03.2017.
+ */
+public class EncodingResult {
+
+    String encodedMessage;
+    Map<String, Character> charTable;
+
+    public EncodingResult(String encodedMessage, Map<String, Character> charTable) {
+        this.encodedMessage = encodedMessage;
+        this.charTable = charTable;
+    }
+
+    public String getEncodedMessage() {
+        return encodedMessage;
+    }
+/*
+    public Map<String, Character> getCharTable() {
+        Map<String, Character> copy = new Map<>(charTable);
+        copy = charTable;
+        return copy;
+    }*/
+}
