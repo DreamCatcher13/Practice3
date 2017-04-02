@@ -1,6 +1,8 @@
 package ua.edu.uzhnu.practice3;
 
 import java.util.Map;
+import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  * Created by Таня on 25.03.2017.
@@ -18,10 +20,10 @@ public class EncodingResult {
     public String getEncodedMessage() {
         return encodedMessage;
     }
-/*
+
     public Map<String, Character> getCharTable() {
-        Map<String, Character> copy = new Map<>(charTable);
+        Map<String,Character> copy = new HashMap<String, Character>();
         copy = charTable;
         return copy;
-    }*/
+    }
 }
