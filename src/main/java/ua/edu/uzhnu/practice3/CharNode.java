@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by Таня on 25.03.2017.
  */
-public class CharNode implements Comparator<CharNode> {
+public class CharNode {
 
     char value;
     int count;
@@ -27,9 +27,17 @@ public class CharNode implements Comparator<CharNode> {
         return count++;
     }
 
-
-    public int compare(CharNode o1, CharNode o2) {
-        return o1.compareTo(o2);
+    public void setHuffmanCode(String code){
+        this.huffmanCode = code;
+        if (this.left != null){
+            this.left.setHuffmanCode(code+"0");
+        }
+        if (this.right != null) {
+            this.right.setHuffmanCode(code + "1");
+        }
     }
+
+
+
 
 }

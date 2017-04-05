@@ -45,6 +45,7 @@ public class HuffmanEncoder {
            second.remove(ind);
            second.add(new CharNode(nodeLeft, nodeRight));
        }
+       second.get(0).setHuffmanCode("");
 
 
        return null;
