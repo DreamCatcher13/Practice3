@@ -46,9 +46,30 @@ public class HuffmanEncoder {
            second.add(new CharNode(nodeLeft, nodeRight));
        }
        second.get(0).setHuffmanCode("");
-
-
-       return null;
+       List<CharNode> third = new ArrayList<CharNode>(map1.values());
+       List<CharNode> fourth = new ArrayList<CharNode>();
+       while (fourth.size()!= third.size()){
+           int  i = 0;
+           if (second.contains(third.get(i))){
+               fourth.add(third.get(i));
+           }
+           i++;
+       }
+       Map<String, Character> map2 = new HashMap<String, Character>();
+       for (int i = 0; i < fourth.size(); i++){
+       map2.put(fourth.get(i).huffmanCode, fourth.get(i).value);
+       }
+       Map<Character, String> map3 = new HashMap<Character, String>();
+       for (int i = 0; i < fourth.size(); i++){
+           map3.put(fourth.get(i).value, fourth.get(i).huffmanCode);
+       }
+       String encoded = new String();
+       for ( int i = 0; i<map3.size(); i++) {
+           if (map3.containsKey(message.charAt(i))) {
+               encoded += map3.get(message.charAt(i));
+           }
+       }
+       return new EncodingResult(encoded, map2);
    }
 
 

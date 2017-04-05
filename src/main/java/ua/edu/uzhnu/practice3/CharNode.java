@@ -31,7 +31,7 @@ public class CharNode {
         this.huffmanCode = code;
         if (this.left != null){
             this.left.setHuffmanCode(code+"0");
-        }
+        } else
         if (this.right != null) {
             this.right.setHuffmanCode(code + "1");
         }
