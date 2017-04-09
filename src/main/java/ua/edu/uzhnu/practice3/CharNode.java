@@ -1,6 +1,7 @@
 package ua.edu.uzhnu.practice3;
 
-import java.util.Comparator;
+
+import java.util.Map;
 
 /**
  * Created by Таня on 25.03.2017.
@@ -36,8 +37,5 @@ public class CharNode {
             this.right.setHuffmanCode(code + "1");
         }
     }
-
-
-
 
 }
