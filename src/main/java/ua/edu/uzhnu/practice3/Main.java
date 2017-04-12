@@ -10,6 +10,7 @@ public class Main {
         String s = "abcdefgh";
         System.out.println(s.substring(0,1));
         System.out.println(s.substring(1));
-
+        s=s.substring(1);
+        System.out.println(s.substring(0,1));
     }
 }

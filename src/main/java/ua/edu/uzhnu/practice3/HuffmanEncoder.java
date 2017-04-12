@@ -58,15 +58,16 @@ public class HuffmanEncoder {
         int k = 0;
         int i = 1;
         while (copy.length()!=0) {
-            for (k = 0; ; ) {
-                if (charTable.containsKey(copy.substring(k, i))) {
-                    decoded += charTable.get(copy.substring(k, i));
+            if (charTable.containsKey(copy.substring(k, i))) {
+                decoded += charTable.get(copy.substring(k, i));
+                // перевірка чи не вилізло за межі рядка
+                if (i < t) {
                     copy = copy.substring(i);
-                    k+=i;
-                    i++;
-                }
-                i++;
-            }
+                    i = 1;
+                } else
+                    break;
+            } else
+            i++;
         }
         return decoded;
     }
