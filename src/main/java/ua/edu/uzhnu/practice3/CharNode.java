@@ -1,7 +1,7 @@
 package ua.edu.uzhnu.practice3;
 
 
-import java.util.Map;
+
 
 /**
  * Created by Таня on 25.03.2017.
@@ -32,7 +32,7 @@ public class CharNode {
         this.huffmanCode = code;
         if (this.left != null){
             this.left.setHuffmanCode(code+"0");
-        } else
+        }
         if (this.right != null) {
             this.right.setHuffmanCode(code + "1");
         }
